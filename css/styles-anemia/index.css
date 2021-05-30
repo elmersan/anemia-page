@@ -1,0 +1,67 @@
+.anemia {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+table {
+  margin: 3rem 0;
+  border: 1px solid var(--black);
+  border-spacing: 0;
+}
+th,
+td {
+  padding: 1rem;
+  border: 1px solid var(--black);
+  border-spacing: 0;
+}
+
+.anemia li {
+  padding-bottom: 2rem;
+}
+
+.anemia img {
+  width: 100%;
+  text-align: center;
+}
+
+.anemia h4 {
+  font: var(--headline4);
+}
+
+.anemia p {
+  text-align: justify;
+}
+
+.anemia h5 {
+  font: var(--headline5);
+}
+
+.anemia-content ul {
+  padding: 2rem 3rem;
+  text-align: left;
+}
+
+@media screen and (min-width: 1024px) {
+  .anemia img {
+    width: 70%;
+  }
+
+  .anemia-content {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem 0;
+  }
+
+  .anemia-content div:nth-child(1),
+  .anemia-content div:nth-child(2) {
+    flex: 1;
+  }
+  .anemia-content i {
+    display: block;
+  }
+
+  .anemia-content:nth-child(odd) .image {
+    order: -1;
+  }
+}

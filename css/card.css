@@ -1,0 +1,32 @@
+.info {
+  display: grid;
+  grid-template: repeat(4, 1fr) / 1fr;
+  gap: 1.5rem;
+}
+
+.info-card {
+  text-align: center;
+}
+
+.info-card img,
+.info-card h4,
+.info-card p {
+  margin-bottom: 1rem;
+}
+
+.info-card img {
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .info {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .info {
+    grid-template: 1fr / repeat(4, 1fr);
+  }
+}
