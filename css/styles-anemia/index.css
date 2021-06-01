@@ -32,6 +32,11 @@ td {
   text-align: justify;
 }
 
+.anemia a {
+  text-decoration: none;
+  color: var(--red);
+}
+
 .anemia h5 {
   font: var(--headline5);
 }
@@ -43,7 +48,7 @@ td {
 
 @media screen and (min-width: 1024px) {
   .anemia img {
-    width: 70%;
+    width: 100%;
   }
 
   .anemia-content {
