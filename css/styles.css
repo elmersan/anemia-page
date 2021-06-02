@@ -1,10 +1,10 @@
 @import url("./header.css");
-
 @import url("./styles-anemia/index.css");
-
 @import url("./card.css");
 @import url("./slider.css");
 @import url("./footer.css");
+@import url("./calculadora.css");
+@import url("./navMobile.css");
 
 * {
   box-sizing: border-box;
@@ -57,7 +57,8 @@ body {
   padding: 4rem 0;
 }
 
-a.btn-primary {
+a.btn-primary,
+input.btn-primary {
   display: block;
   background: var(--red);
   padding: 1rem 2rem;
@@ -70,7 +71,8 @@ a.btn-primary {
 }
 
 @media screen and (min-width: 768px) {
-  a.btn-primary {
+  a.btn-primary,
+  input.btn-primary {
     width: 50%;
   }
 }

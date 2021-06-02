@@ -1,0 +1,107 @@
+.content-calculadora {
+  height: 100vh;
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+label {
+  text-align: left;
+}
+
+#btn-submit {
+  background: var(--black);
+}
+
+.calculadora label span,
+input,
+.results div h5 {
+  padding: 1rem 2rem;
+  display: block;
+  border-radius: 0.5rem;
+  font: var(--body1);
+  margin: 1rem 0;
+}
+
+label span,
+.results div h5 {
+  background: var(--gray);
+  width: 100%;
+}
+
+label input {
+  width: 100%;
+  border: 1px solid var(--black);
+}
+
+input.btn-primary {
+  border: none;
+}
+
+/* resultados */
+
+div.results {
+  align-items: flex-start;
+}
+
+.results div p,
+.results div h5 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.results div + p {
+  font: var(--headline4);
+}
+
+.clasificacion {
+  padding: 2rem;
+  font: var(--headline4);
+  color: var(--white);
+  border-radius: 0.4rem;
+  margin: 0 auto;
+}
+.content-progress {
+  border: 1px solid var(--black);
+  margin-bottom: 2rem;
+}
+.progress {
+  height: 5rem;
+  animation-name: progreso;
+  animation-duration: 5s;
+  animation-iteration-count: initial;
+}
+
+@keyframes progreso {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .calculadora {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .calculadora label span,
+  input {
+    margin: 0;
+  }
+
+  .calculadora label span {
+    display: inline-block;
+    width: 60%;
+  }
+
+  .calculadora label input {
+    display: inline-block;
+    width: 30%;
+  }
+}

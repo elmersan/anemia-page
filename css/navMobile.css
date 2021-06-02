@@ -1,0 +1,26 @@
+.nav-mobile {
+  display: block;
+  position: fixed;
+  background: var(--white);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  width: 100%;
+  left: -100%;
+  z-index: 1;
+}
+
+.nav-mobile ul {
+  flex-direction: column;
+}
+
+.nav-mobile.active {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  left: 0%;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-mobile {
+    display: none;
+  }
+}

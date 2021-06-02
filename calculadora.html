@@ -75,15 +75,29 @@
               <li>
                 <a href="./tratamiento.html">Tratamiento</a>
                 <ul class="sub-menu">
-                  <li><a href="#menores">Para menores de 6 meses</a></li>
                   <li>
-                    <a href="#menores">Para niños de 06 a 35 meses</a>
+                    <a href="./tratamiento.html#menores"
+                      >Para menores de 6 meses</a
+                    >
                   </li>
                   <li>
-                    <a href="#menores2">Parar niños de 36 a 59 meses</a>
+                    <a href="./tratamiento.html#menores"
+                      >Para niños de 06 a 35 meses</a
+                    >
                   </li>
-                  <li><a href="#menores2">Para adolescentes</a></li>
-                  <li><a href="#gestantes">Para gestantes y puérperas</a></li>
+                  <li>
+                    <a href="./tratamiento.html#menores2"
+                      >Parar niños de 36 a 59 meses</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./tratamiento.html#menores2">Para adolescentes</a>
+                  </li>
+                  <li>
+                    <a href="./tratamiento.html#gestantes"
+                      >Para gestantes y puérperas</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li>
@@ -119,7 +133,7 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="./calculadora.html">Calculadora</a></li>
+              <li><a href="">Calculadora</a></li>
             </ul>
           </nav>
           <div class="burger" id="burger">
@@ -128,7 +142,6 @@
         </div>
       </div>
     </header>
-    <!-- header -->
 
     <aside class="wrapper">
       <nav class="nav nav-mobile" id="nav">
@@ -153,59 +166,44 @@
 
     <main class="main">
       <div class="wrapper">
-        <div class="main-content">
+        <div class="main-content content-calculadora">
+          <h3>Calculadora</h3>
           <section class="anemia">
-            <div class="anemia-content" id="menores">
-              <div class="image">
-                <h5>Tratamiento en niños</h5>
-                <img
-                  src="https://anemia.ins.gob.pe/sites/default/files/inline-images/11.1.jpg"
-                  alt="esquema de tratamiento en menores de 6 meses"
+            <div class="anemia-content calculadora">
+              <form action="" class="calculadora">
+                <label for="hemoglobina">
+                  <span>Hemoglobina Observada (g/dl):</span>
+                  <input
+                    type="number"
+                    id="hemoglobina"
+                    placeholder="ejem: 14"
+                    required
+                    min="1"
+                    max="20"
+                    name="hemoglobina"
+                  />
+                </label>
+                <label for="altitud">
+                  <span>Altitud de lugar de procedencia (msnm):</span>
+                  <input
+                    type="number"
+                    id="altitud"
+                    required
+                    min="1"
+                    max="10000"
+                    name="altitud"
+                  />
+                </label>
+                <input
+                  type="submit"
+                  value="CALCULAR"
+                  class="btn-primary"
+                  id="btn-submit"
                 />
-              </div>
-              <div class="image">
-                <h5>Tratamiento en niños de 06 a 35 meses</h5>
-                <img
-                  src="https://anemia.ins.gob.pe/sites/default/files/inline-images/Dosis%20tratamiento%20ni%C3%B1os%206_35%20meses.jpeg"
-                  alt="esquema de tratamiento en niños de 6 a 35 meses"
-                />
-              </div>
+              </form>
             </div>
+            <div class="anemia-content results" id="content-results"></div>
           </section>
-          <!-- menores -->
-
-          <section class="anemia">
-            <div class="anemia-content" id="menores2">
-              <div class="image">
-                <h5>Tratamiento en niños de 35 a 59 meses</h5>
-                <img
-                  src="https://anemia.ins.gob.pe/sites/default/files/inline-images/Dosis%20tratamiento%20ni%C3%B1os%2036_59%20meses.jpeg"
-                  alt="esquema de tratamiento en niños de 35 a 59 meses"
-                />
-              </div>
-              <div class="image">
-                <h5>Tratamiento en adolescentes</h5>
-                <img
-                  src="https://anemia.ins.gob.pe/sites/default/files/inline-images/Dosis%20tratamiento%20adolescentes.jpeg"
-                  alt="esquema de tratamiento para adolescentes"
-                />
-              </div>
-            </div>
-          </section>
-          <!-- menores -->
-
-          <section class="anemia">
-            <div class="anemia-content" id="gestantes">
-              <div class="image">
-                <h5>Tratamiento en gestantes y puérperas</h5>
-                <img
-                  src="https://anemia.ins.gob.pe/sites/default/files/inline-images/Dosis%20tratamiento%20gestantes_pu%C3%A9rperas.jpeg.jpeg"
-                  alt="esquema de tratamiento para gestantes"
-                />
-              </div>
-            </div>
-          </section>
-          <!-- gestantes -->
         </div>
       </div>
     </main>
@@ -219,8 +217,6 @@
     </footer>
     <!-- footer -->
 
-    <script type="text/javascript" src="./index.js">
-      alert("joder");
-    </script>
+    <script src="./calculadora.js"></script>
   </body>
 </html>

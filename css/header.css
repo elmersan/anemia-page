@@ -4,7 +4,7 @@
   top: 0;
   width: 100%;
   background: var(--white);
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav ul,
@@ -40,9 +40,23 @@
   transition: all 0.3s ease-in-out;
 }
 
+.burger {
+  width: 10%;
+  display: flex;
+  cursor: pointer;
+}
+
+.burger img {
+  width: 100%;
+}
+
 @media screen and (min-width: 1024px) {
   .header-content {
     padding: 0;
+  }
+
+  .burger {
+    display: none;
   }
 
   .nav {
