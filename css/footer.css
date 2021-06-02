@@ -1,5 +1,7 @@
 .footer {
   background: var(--black);
+  height: 90px;
+  overflow: hidden;
 }
 
 .footer-content {

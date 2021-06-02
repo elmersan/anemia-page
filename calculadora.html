@@ -170,7 +170,11 @@
           <h3>Calculadora</h3>
           <section class="anemia">
             <div class="anemia-content calculadora">
-              <form action="" class="calculadora">
+              <form
+                action=""
+                class="calculadora"
+                onsubmit="validateForm(event);"
+              >
                 <label for="hemoglobina">
                   <span>Hemoglobina Observada (g/dl):</span>
                   <input
@@ -192,8 +196,10 @@
                     min="1"
                     max="10000"
                     name="altitud"
+                    placeholder="ejem: 1000"
                   />
                 </label>
+                <span id="error"></span>
                 <input
                   type="submit"
                   value="CALCULAR"

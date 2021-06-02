@@ -1,3 +1,7 @@
+.content-calculadora {
+  min-height: calc(100vh - 90px - 85px);
+}
+
 .calculadora {
   display: flex;
   flex-direction: column;
@@ -36,6 +40,11 @@ label input {
 
 input.btn-primary {
   border: none;
+}
+
+#error {
+  color: var(--red);
+  font: var(--button);
 }
 
 /* resultados */
@@ -103,11 +112,5 @@ div.results {
 
   .clasificacion {
     font: var(--headline4);
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .content-calculadora {
-    height: 100vh;
   }
 }

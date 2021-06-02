@@ -7,10 +7,18 @@ const ANEMIA = {
   grave: "#FFA3A3",
 };
 
+const MESSAGE = {
+  descartada: "Es necesario que inicie / continúe con la SUPLEMENTACIÓN.",
+  leve: "Acudir a consulta con el profesional médico.",
+  moderada: "Acudir a consulta con el profesional médico.",
+  grave:
+    "Debe ser referído a un establecimiento de salud de mayor complejidad.",
+};
+
 function templateAnemy(hemoglobina, clasificacion) {
-  console.log(clasificacion);
   const color = ANEMIA[clasificacion] || "";
-  console.log(color);
+  const message = MESSAGE[clasificacion] || "";
+
   return `
   <div>
     <h5>Hemoglobina Corregida (g/dl):</h5>
@@ -22,7 +30,7 @@ function templateAnemy(hemoglobina, clasificacion) {
   <div>
     <h5>Diagnóstico</h5>
     <p class="clasificacion"  style="background: ${color};">Anemia ${clasificacion}</p>
-    <p>Acudir a consulta con el profesional médico.</p>
+    <p>${message}</p>
   </div>
   `;
 }
@@ -54,15 +62,17 @@ function correctClasification(valueHemoglobina) {
 }
 
 // Mostrar reultados de la consulta
-var btn = document.getElementById("btn-submit");
 
-btn.addEventListener("click", function (e) {
+function validateForm(e) {
+  e.preventDefault();
+
   // trayendo datos del form
   var hemoglobina = document.getElementById("hemoglobina");
   var altitud = document.getElementById("altitud");
 
   if (hemoglobina.value != "" && altitud.value != "") {
-    e.preventDefault();
+    let error = document.getElementById("error");
+    error.style.display = "none";
 
     // evaluar la hemoglobina
     const valueHemoglobina = correctHemoglobina(
@@ -78,6 +88,8 @@ btn.addEventListener("click", function (e) {
     let box = document.getElementById("content-results");
     box.innerHTML = templateResults;
   } else {
-    alert("completa los campos pobretón");
+    let error = document.getElementById("error");
+    error.style.display = "block";
+    error.textContent = "Ingrese los campos solicitados";
   }
-});
+}

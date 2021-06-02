@@ -5,6 +5,7 @@
   width: 100%;
   background: var(--white);
   z-index: 2;
+  height: 85px;
 }
 
 .nav ul,
