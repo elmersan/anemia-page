@@ -505,6 +505,15 @@
       </div>
     </footer>
     <!-- footer -->
-    <script src="./index.js"></script>
+    <script>
+      let iconMenu = document.getElementById("burger");
+      let nav = document.getElementById("nav");
+
+      iconMenu.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+
+    <script src="./calculadora.js"></script>
   </body>
 </html>

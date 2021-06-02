@@ -47,10 +47,3 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-
-let iconMenu = document.getElementById("burger");
-let nav = document.getElementById("nav");
-
-iconMenu.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});

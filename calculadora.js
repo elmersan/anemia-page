@@ -81,10 +81,3 @@ btn.addEventListener("click", function (e) {
     alert("completa los campos pobretón");
   }
 });
-
-let iconMenu = document.getElementById("burger");
-let nav = document.querySelector("nav");
-
-iconMenu.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});

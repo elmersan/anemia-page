@@ -297,7 +297,15 @@
       </div>
     </footer>
     <!-- footer -->
+    <script>
+      let iconMenu = document.getElementById("burger");
+      let nav = document.getElementById("nav");
 
-    <script src="./index.js"></script>
+      iconMenu.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+
+    <script src="./calculadora.js"></script>
   </body>
 </html>
